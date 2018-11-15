@@ -1,0 +1,16 @@
+package com.oleynikov.testuran.di
+
+import android.arch.lifecycle.ViewModel
+import dagger.MapKey
+import java.lang.annotation.ElementType
+import java.lang.annotation.Retention
+import java.lang.annotation.RetentionPolicy
+import java.lang.annotation.Target
+import kotlin.reflect.KClass
+
+
+@MustBeDocumented
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@MapKey
+internal annotation class ViewModelKey(val value: KClass<out ViewModel>)
